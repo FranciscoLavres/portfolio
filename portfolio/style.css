@@ -1,2 +1,122 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: "titulos";
+    src: url(assets/fonts/Italiana/Italiana-Regular.ttf);
+}
+
+@font-face {
+    font-family: "corpo";
+    src: url(assets/fonts/Instrument_Sans/InstrumentSans-VariableFont_wdth\,wght.ttf);
+}
+
+:root {
+    --greydark: #616161;
+    --white: #fff;
+    --greysoft: #dbdbdb;
+    --greystrong: #6d6d6d;
+    --black: #000;
+}
+
+body {
+    background-image: linear-gradient(to left, var(--greydark), var(--greysoft));
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "corpo";
+}
+
+
+/*
+HEADER, LOGO E NAV
+*/
+
+
+header {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logotipo {
+    display: flex;
+    justify-content: center;
+}
+
+.logotipo img{
+    width: 60px;
+    height: auto;
+    transition: 1.2s;
+}
+
+.logotipo img:hover{
+    transform: scale(1.1);
+    transform: rotate(360deg);
+    transition: 1.2s;
+}
+
+nav {
+    display: flex;
+    gap: 50px;
+    margin-left: auto; 
+    position: fixed;
+    right: 80px;
+    top: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+    position: relative;
+    transition: transform 500ms ease-in-out;
+}
+
+nav a::after{
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background-color: var(--black);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    transition: transform 500ms ease-in-out;
+}
+
+nav a:hover::after{
+    transform: translateX(-50%) scaleX(1);
+}
+
+nav a:hover{
+    transform: scale(1.1);
+    transition: 500ms;
+}
+
+
+/*
+MAIN, CABEÇALHO E SOBRE
+*/
+
+
+.cabeçalho p{
+    font-size: 60px;
+    font-family: "titulos";
+}
+
+.sobre{
+    width: 400px;
+}
+
+
+/*
+FOOTER, REDES SOCIAIS, DIREITOS RESERVADOS E MODO ESCURO
+*/
+
+
+.redes-sociais{
+    filter: invert(0);
+}
+
+.escuro{
+    filter: invert(0);
+}
