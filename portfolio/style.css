@@ -18,13 +18,20 @@
     --black: #000;
 }
 
-body {
+html, body {
     background-image: linear-gradient(to left, var(--greydark), var(--greysoft));
     background-size: cover;
     background-attachment: fixed;
     font-family: "corpo";
+    width: 100%;
+    height: 100%;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /*
 HEADER, LOGO E NAV
@@ -42,7 +49,7 @@ header {
 }
 
 .logotipo img{
-    width: 60px;
+    width: 80px;
     height: auto;
     transition: 1.2s;
 }
@@ -60,6 +67,15 @@ nav {
     position: fixed;
     right: 80px;
     top: 20px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 0;
+    margin: 0; 
 }
 
 nav a{
@@ -97,26 +113,109 @@ nav a:hover{
 MAIN, CABEÇALHO E SOBRE
 */
 
-
-.cabeçalho p{
-    font-size: 60px;
-    font-family: "titulos";
-}
-
-.sobre{
-    width: 400px;
-}
-
-
 /*
 FOOTER, REDES SOCIAIS, DIREITOS RESERVADOS E MODO ESCURO
-*/
 
 
-.redes-sociais{
-    filter: invert(0);
+.rodape-preto{
+    background-color: var(--black);
+    width: 100%;
+    height: 7%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.escuro{
-    filter: invert(0);
+.redes-sociais{
+    filter: invert(0.8);
+    position: absolute;
+    left: 10px;
+    top: 13px;
+}
+
+.copy{
+    filter: invert(0.8);
+    bottom: 0;
+    position: absolute;
+    
+    font-size: 12px;
+}
+
+.escuro img{
+    filter: invert(0.8);
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}*/
+
+.rodape {
+    background-color: var(--black);
+    color: var(--white);
+    width: 100vw;         /* ocupa toda a largura da viewport */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;      /* fixo na parte inferior */
+    bottom: 0;
+    left: 0;
+    font-family: "corpo";
+    z-index: 1000;        /* fica sobre o conteúdo */
+}
+
+
+/* Ícones das redes sociais */
+.redes-sociais a img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+    transition: 0.3s;
+    margin-right: 15px;
+}
+
+.redes-sociais a img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Texto de direitos reservados */
+.copy {
+    font-size: 14px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Ícone do modo escuro */
+.modo-escuro img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modo-escuro img:hover {
+    transform: rotate(20deg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .redes-sociais a img {
+        margin-right: 10px;
+    }
+
+    .copy {
+        font-size: 12px;
+    }
 }
