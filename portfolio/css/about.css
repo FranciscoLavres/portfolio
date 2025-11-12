@@ -1,0 +1,118 @@
+main{
+   /* background-color: white;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    justify-content: center;
+    display: flex;
+    font-size: 70px;
+}
+
+.titulo p{
+    border-bottom: 3px solid black;
+}
+
+.espaco{
+   /*  background-color: aqua;*/
+    display: flex;
+}
+
+.sobre-mim{
+   /*  background-color: lightblue;*/
+    width: 50%;
+    height: auto;
+    font-size: 30px;
+    padding: 90px;
+}
+
+.skills{
+   /*  background-color: beige;*/
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.skills-nome{
+    font-size: 60px;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.linguagens{
+    flex-direction: column;
+    display: flex;
+}
+
+.linguagens ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0; 
+    font-size: 25px;
+}
+
+
+.linguagens button{
+    font-size: 25px;
+    width: auto;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    border: 3px solid rgb(129, 129, 129);
+    transition: 500ms;
+}
+
+.linguagens button:hover{
+    transform: scale(1.3);
+    transition: 500ms;
+}
+
+.linguagens button:active{
+    background-color: rgb(129, 129, 129);
+    border: 3px solid rgb(0,0,0);
+    color: lightgray;
+    transition: 200ms;
+}
+
+.center{
+    justify-content: center;
+    display: flex;
+}
+
+
+/*
+GRÁFICO APENAS
+*/
+
+button {
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+#grafico-container {
+    width: 400px;
+    height: 250px;
+    margin-top: 30px;
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

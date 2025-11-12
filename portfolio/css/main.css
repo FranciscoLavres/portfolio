@@ -2,14 +2,16 @@
 
 @font-face {
     font-family: "titulos";
-    src: url(assets/fonts/Italiana/Italiana-Regular.ttf);
+    src: url(../assets/fonts/Italiana/Italiana-Regular.ttf);
 }
 
 @font-face {
     font-family: "corpo";
-    src: url(assets/fonts/Instrument_Sans/InstrumentSans-VariableFont_wdth\,wght.ttf);
+    src: url(../assets/fonts/Instrument_Sans/InstrumentSans-VariableFont_wdth\,wght.ttf);
 }
-
+/*
+GLOBAL
+*/
 :root {
     --greydark: #616161;
     --white: #fff;
@@ -20,19 +22,13 @@
 
 html, body {
     background-image: linear-gradient(to left, var(--greydark), var(--greysoft));
-    background-size: cover;
-    background-attachment: fixed;
     font-family: "corpo";
-    width: 100%;
-    height: 100%;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+span{
+    font-family: "titulos";
 
+}
 /*
 HEADER, LOGO E NAV
 */
@@ -81,7 +77,7 @@ nav ul{
 nav a{
     text-decoration: none;
     color: var(--black);
-    font-size: 20px;
+    font-size: 28px;
     position: relative;
     transition: transform 500ms ease-in-out;
 }
@@ -108,14 +104,9 @@ nav a:hover{
     transition: 500ms;
 }
 
-
-/*
-MAIN, CABEÇALHO E SOBRE
-*/
-
 /*
 FOOTER, REDES SOCIAIS, DIREITOS RESERVADOS E MODO ESCURO
-
+*/
 
 .rodape-preto{
     background-color: var(--black);
@@ -125,7 +116,7 @@ FOOTER, REDES SOCIAIS, DIREITOS RESERVADOS E MODO ESCURO
     bottom: 0;
     left: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -134,88 +125,35 @@ FOOTER, REDES SOCIAIS, DIREITOS RESERVADOS E MODO ESCURO
     position: absolute;
     left: 10px;
     top: 13px;
+    
+}
+
+.redes-sociais img{
+    transition: 400ms;
+}
+
+.redes-sociais img:hover{
+    transform: scale(1.1);
+    transition: 400ms;
 }
 
 .copy{
     filter: invert(0.8);
-    bottom: 0;
+    bottom: 2px;
     position: absolute;
-    
     font-size: 12px;
 }
 
-.escuro img{
+.modo-escuro img{
     filter: invert(0.8);
     position: absolute;
     right: 20px;
     top: 15px;
-}*/
-
-.rodape {
-    background-color: var(--black);
-    color: var(--white);
-    width: 100vw;         /* ocupa toda a largura da viewport */
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;      /* fixo na parte inferior */
-    bottom: 0;
-    left: 0;
-    font-family: "corpo";
-    z-index: 1000;        /* fica sobre o conteúdo */
-}
-
-
-/* Ícones das redes sociais */
-.redes-sociais a img {
-    width: 24px;
-    height: 24px;
-    filter: invert(1);
-    transition: 0.3s;
-    margin-right: 15px;
-}
-
-.redes-sociais a img:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
-}
-
-/* Texto de direitos reservados */
-.copy {
-    font-size: 14px;
-    text-align: center;
-    flex: 1;
-}
-
-/* Ícone do modo escuro */
-.modo-escuro img {
-    width: 24px;
-    height: 24px;
-    filter: invert(1);
+    transition: 400ms;
     cursor: pointer;
-    transition: 0.3s;
 }
 
-.modo-escuro img:hover {
-    transform: rotate(20deg);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .rodape {
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .redes-sociais a img {
-        margin-right: 10px;
-    }
-
-    .copy {
-        font-size: 12px;
-    }
+.modo-escuro img:hover{
+    transform: scale(1.1);
+    transition: 400ms;
 }
