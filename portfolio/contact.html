@@ -27,21 +27,51 @@
 
     <main>
         <div class="geral">
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18194.570122439796!2d-37.073471523453385!3d-10.970392088933794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab143dce5a8f5%3A0xdce07c193ed061d0!2sUnit%20-%20Universidade%20Tiradentes!5e1!3m2!1spt-BR!2sbr!4v1762983910748!5m2!1spt-BR!2sbr"
-                    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <div class="titulo">
+                <p><span>Contato</span></p>
             </div>
-
-            <section class="contato">
-                <form action="">
-                    <div class="formularios">
-                        <label for="">Email</label>
-                        <input type="text">
+            <div class="conteudo">
+                <section class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18194.570122439796!2d-37.073471523453385!3d-10.970392088933794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab143dce5a8f5%3A0xdce07c193ed061d0!2sUnit%20-%20Universidade%20Tiradentes!5e1!3m2!1spt-BR!2sbr!4v1762983910748!5m2!1spt-BR!2sbr"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </section>
+                <section class="contato">
+                    <div class="nome-email">
+                        <div class="individual">
+                            <form id="emailForm">
+                                <input type="email" id="emailInput" placeholder="Name">
+                            </form>
+                        </div>
+                        <div class="individual">
+                            <form id="emailForm">
+                                <input type="email" id="emailInput" placeholder="E-mail">
+                                <!--<button type="submit">Validation</button>-->
+                            </form>
+                            
+                        </div>
                     </div>
-                </form>
-            </section>
+
+                    <div class="interesse">
+                        <div class="interesse-centro">
+                            <form id="emailForm">
+                                <input type="email" id="emailInput" placeholder="Name">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="descript">
+                        <div class="descricao">
+                            <form id="emailForm">
+                                <input type="email" id="emailInput" placeholder="Descript">
+                            </form>
+                        </div>
+                    </div>
+
+                    <p id="resultMessage"></p>
+                </section>
+            </div>
         </div>
     </main>
 
