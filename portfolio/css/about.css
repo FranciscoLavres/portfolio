@@ -4,16 +4,6 @@ main{
     flex-direction: column;
 }
 
-.titulo{
-    justify-content: center;
-    display: flex;
-    font-size: 70px;
-}
-
-.titulo p{
-    border-bottom: 3px solid black;
-}
-
 .espaco{
    /*  background-color: aqua;*/
     display: flex;
@@ -24,7 +14,7 @@ main{
     width: 50%;
     height: auto;
     font-size: 30px;
-    padding: 90px;
+    padding: 70px;
 }
 
 .skills{
@@ -93,10 +83,10 @@ GRÁFICO APENAS
 */
 
 button {
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
 #grafico-container {
     width: 400px;

@@ -29,6 +29,40 @@ span{
     font-family: "titulos";
     
 }
+
+.titulo{
+    display: flex;
+    justify-content: center; /* centraliza horizontal */
+    align-items: center;     /* centraliza vertical */
+    width: 100%;        /* garante que ocupe a linha inteira */
+    font-size: 70px;  
+}
+
+.titulo p{
+    
+    position: relative;
+    display: inline-block;
+    font-size: inherit; /* mantém o tamanho do pai */
+}
+
+.titulo p::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background: black;
+
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: linha 0.8s ease forwards;
+}
+
+@keyframes linha {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+}
 /*
 HEADER, LOGO E NAV
 */

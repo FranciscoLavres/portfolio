@@ -12,17 +12,6 @@ input{
     border-color: rgb(163, 163, 163);
 }
 
-.titulo{
-    font-size: 70px;
-    /*background-color: coral;*/
-    justify-content: center;
-    display: flex;
-}
-
-.titulo p{
-    border-bottom: 3px solid black;
-}
-
 .conteudo{
     /*background-color: aqua;*/
     width: 100%;
