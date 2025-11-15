@@ -20,14 +20,15 @@ GLOBAL
     --black: #000;
 }
 
-html, body {
+body {
     background-image: linear-gradient(to left, var(--greydark), var(--greysoft));
     font-family: "corpo";
+    padding: 0;
+    margin: 0;
 }
 
 span{
     font-family: "titulos";
-    
 }
 
 .titulo{
@@ -159,7 +160,6 @@ FOOTER, REDES SOCIAIS, DIREITOS RESERVADOS E MODO ESCURO
     position: absolute;
     left: 10px;
     top: 13px;
-    
 }
 
 .redes-sociais img{
@@ -190,4 +190,117 @@ FOOTER, REDES SOCIAIS, DIREITOS RESERVADOS E MODO ESCURO
 .modo-escuro img:hover{
     transform: scale(1.1);
     transition: 400ms;
+}
+
+/*
+MODO ESCURO
+*/
+
+
+body.escuro {
+    background: linear-gradient(to left, var(--greydark), var(--greystrong));
+    color: var(--greysoft);
+}
+
+.escuro .logotipo img{
+    filter: invert(1);
+}
+
+.escuro .redes-sociais img {
+    filter: invert(1);
+}
+
+.escuro .modo-escuro img{
+    filter: invert(0);
+}
+
+body.escuro a{
+    color: var(--greysoft);
+}
+
+.escuro .rodape-preto{
+    background-color: var(--greysoft);
+
+}
+
+.escuro .titulo p::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background: var(--greysoft);
+
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: linha 0.8s ease forwards;
+}
+
+.escuro nav a::after{
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background-color: var(--greysoft);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+}
+
+nav a:hover::after{
+    transform: translateX(-50%) scaleX(1);
+}
+
+
+#menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 42px;
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+    right: 30px;
+    top: 10px;
+    z-index: 2000;
+}
+
+/* 
+RESPONSIVO
+*/
+@media (max-width: 800px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: var(--black);
+        width: 200px;
+        height: 100vh;
+        padding-top: 80px;
+        z-index: 1500;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 20px;
+    }
+
+    nav a {
+        font-size: 24px;
+    }
+
+    #menu-toggle:checked ~ nav {
+        display: flex;
+    }
 }

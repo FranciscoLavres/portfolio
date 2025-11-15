@@ -1,0 +1,46 @@
+main {
+    justify-content: center;
+    display: flex;
+}
+
+.conteudo-principal {
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 75%;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.foto img {
+    /* background-color: brown;*/
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 25%;
+    margin-left: 2%;
+}
+
+.sobre-mim {
+   /*  background-color: aqua;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cabeçalho {
+  /*  background-color: chartreuse;*/
+    font-size: 80px;
+    padding: 10px;
+    max-height: 350px;
+    margin-top: 50px;
+    max-width: auto;
+}
+
+.paragrafo {
+   /*  background-color: blueviolet;*/
+    font-size: 28px;
+    padding: 20px;
+    max-width: auto;
+}

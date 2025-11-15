@@ -1,12 +1,116 @@
-.todos-projetos{
-    background-color: aqua;
+.todos-projetos {
+   /* background-color: aqua;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.imagens{
-    background-color: burlywood;
+.imagens {
+    /*background-color: burlywood;*/
     width: 100%;
-    height: 100px;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 90px;
+}
+
+
+
+
+/*
+SOBREPOSIÇÃO DENTRO DOS CARDS
+*/
+
+.primeiros{
+   /* background-color: blue;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.segundos{
+   /* background-color: blue;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    max-width: 550px;
+    max-height: 263px;
+   /* background-color: dodgerblue;*/
+    position: relative;
+    /* necessário para o overlay ficar dentro */
+    overflow: hidden;
+    /* impede o overlay de vazar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.342);
+}
+
+.card img{
+    width: auto;
+    height: auto;
+}
+
+/* Overlay interno */
+.sobreposicao {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    /* overlay aparece pela direita */
+    width: 100%;
+    /* cobre metade da card */
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.966));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(100%);
+    /* começa fora da card */
+    transition: transform 0.4s ease;color: #fff;
+    gap: 10px;
+}
+
+.sobreposicao p{
+    text-align: center;
+}
+
+.caixas{
+    display: flex;
+    gap: 10px;
+}
+
+/* Caixinha interna */
+.box {
+    font-size: 15px;
+    width: auto;
+    background-color: lightgray;
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+    border: 3px solid rgb(129, 129, 129);
+
+}
+
+/* Quando passa o mouse na card → overlay entra */
+.card:hover .sobreposicao {
+    transform: translateY(0);
+    /* desliza para dentro da card */
+}
+
+/* Animação da caixinha “HTML” */
+.card:hover .sobreposicao .box {
+    opacity: 1;
+    transform: translateX(0);
 }

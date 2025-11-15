@@ -1,0 +1,21 @@
+body {
+    background: radial-gradient(circle, white 8%, black 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    cursor: pointer;
+}
+
+body.ligado {
+    background: radial-gradient(circle, rgb(199, 199, 199) 8%, rgba(255, 251, 0, 0.932) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}

@@ -7,6 +7,7 @@
     <title>Francisco Lavres | Home</title>
     <link rel="shortcut icon" href="assets/images/triquetra.png" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="js/escuro.js" defer></script>
 
 </head>
@@ -14,6 +15,11 @@
 <body>
     <header>
         <div class="logotipo"><a href="#" id="logotipo"><img src="assets/images/triquetra.png" alt="logotipo"></a></div>
+
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
+
 
         <nav>
             <ul>
@@ -24,42 +30,52 @@
         </nav>
     </header>
 
-    <main class="conteudo-principal">
-        <section class="foto-titulo">
-            <div class="foto-perfil"><img src="" alt="Foto de Perfil"></div>
+    <main>
 
+        <div class="conteudo-principal">
 
-            <div class="cabeçalho">
-                <p>I'M FRANCISCO LAVRES</p>
-            </div>
-            <div class="vazia"></div>
-        </section>
-        <section class="sobre-mim">
-            <div class="paragrafo">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt incidunt sapiente debitis excepturi
-                    aliquam cum veniam tempora iure accusamus laboriosam numquam architecto rerum blanditiis nemo
-                    commodi delectus, saepe odit vel Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-                    ipsum maiores ad mollitia natus in consequuntur doloribus, sit, magni laborum. Fuga, nemo?
-                    Consequatur natus voluptate ex dolore odio consequuntur?emorem ipsum, dolor sit amet consectetur
-                    adipisicing elit. Sunt incidunt sapiente debitis excepturi
-                    aliquam cum veniam tempora iure accusamus laboriosam numquam architecto rerum blanditiis nemo
-                    commodi delectus, saepe odit vel Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut
-                    ipsum maiores ad mollitia natus in consequuntur doloribus, sit, magni laborum. Fuga, nemo?
-                    Consequatur natus voluptate ex dolore odio consequuntur?em</p>
-            </div>
-        </section>
+            <section class="foto">
+                <div class="foto-perfil"><img src="assets/images/1000137936.jpg" alt="Foto de Perfil"></div>
+            </section>
+
+            <section class="sobre-mim">
+                <div class="cabeçalho">
+                    <p><span>I'M FRANCISCO LAVRES</span></p>
+                </div>
+                <div class="paragrafo">
+                    <p>Estudante de Ciências da Computação na Unit e atualmente estou no segundo período, dando meus
+                        primeiros passos dentro desse universo que sempre me fascinou. Desde que comecei a programar,
+                        descobri o quanto gosto de transformar ideias em algo funcional, enxergando cada linha de código
+                        como uma oportunidade de criar, melhorar e evoluir. Meu objetivo é me tornar desenvolvedor
+                        full-stack, dominando tanto o front quanto o back-end para compreender por completo o
+                        funcionamento de uma aplicação. Tenho buscado aprender novas tecnologias, praticar
+                        constantemente e me desafiar em cada projeto, acreditando que a dedicação diária é o que me
+                        aproxima da carreira que desejo. Estou construindo meu caminho com curiosidade, foco e vontade
+                        de crescer na área da tecnologia.</p>
+
+                </div>
+            </section>
+
+        </div>
     </main>
 
     <footer>
         <section class="rodape-preto">
             <div class="redes-sociais">
-                <a href="http://instagram.com" target="_blank"><img src="assets/images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.instagram.com/francisco.lvres/?hl=pt-br" target="_blank"><img
+                        src="assets/images/instagram.png" alt="Instagram"></a>
 
-                <a href="http://github.com" target="_blank"><img src="assets/images/github.png" alt="Github"></a>
+                <a href="https://github.com/FranciscoLavres" target="_blank"><img src="assets/images/github.png"
+                        alt="Github"></a>
 
-                <a href="http://linkedin.com" target="_blank"><img src="assets/images/linkedin.png" alt="Linkedin"></a>
+                <a href="https://www.linkedin.com/in/francisco-lavres-820115399/" target="_blank"><img
+                        src="assets/images/linkedin.png" alt="Linkedin"></a>
 
-                <a href="http://x.com" target="_blank"><img src="assets/images/twitter.png" alt="Twitter/X"></a>
+                <a href="https://x.com/franciscolvres" target="_blank"><img src="assets/images/twitter.png"
+                        alt="Twitter/X"></a>
+
+                <a href="https://discord.com/users/fava45" target="_blank"><img src="assets/images/discord.png"
+                        alt="Discord"></a>
             </div>
 
             <div class="copy">
@@ -67,7 +83,7 @@
                 <!--Centralizar e jogar para baixo-->
             </div>
 
-            <div class="modo-escuro"><img src="assets/images/escuro.png" alt="Modo Escuro"></div>
+            <div class="modo-escuro" id="escuro"><img src="assets/images/escuro.png" alt="Modo Escuro"></div>
         </section>
     </footer>
 </body>

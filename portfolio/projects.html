@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,15 @@
     <link rel="stylesheet" href="css/projects.css">
     <script src="js/escuro.js"></script>
 </head>
+
 <body>
     <header>
-        <div class="logotipo"><a href="index.html" id="logotipo"><img src="assets/images/triquetra.png" alt="logotipo"></a></div>
+        <div class="logotipo"><a href="index.html" id="logotipo"><img src="assets/images/triquetra.png"
+                    alt="logotipo"></a></div>
+
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">☰</label>
+
 
         <nav>
             <ul>
@@ -25,25 +31,92 @@
     <main>
         <section class="todos-projetos">
             <div class="projects">
-                <div class="titulo"><p><span>Projects</span></p></div>
+                <div class="titulo">
+                    <p><span>Projects</span></p>
+                </div>
             </div>
 
             <div class="imagens">
-                <div class="viajeja">
-                    <a href=""><img src="" alt="Viaje Já"></a>
+
+
+                <div class="primeiros">
+                    <div class="card">
+                        <a href="projects-add/viaje-ja/index.html" target="_blank">
+                            <div class="content">
+                                <img src="assets/images/gifs/viaje-ja.gif" alt="Viaje Já">
+                            </div>
+                            <div class="sobreposicao">
+                                <p>Viaje Já é um site de viagens que facilita encontrar destinos, ofertas e roteiros de
+                                    forma rápida e prática.</p>
+                                <div class="caixas">
+                                    <div class="box">HTML</div>
+                                    <div class="box">CSS</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="card">
+                        <a href="projects-add/lampada/index.html" target="_blank">
+                            <div class="content">
+                                <img src="assets/images/gifs/lampada.gif" alt="Lâmpada">
+                            </div>
+                            <div class="sobreposicao">
+                                <p>Um pequeno HTML que, ao clicar numa lâmpada, troca a cor do background da página para
+                                    simular o efeito de ligar e desligar.</p>
+                                <div class="caixas">
+                                    <div class="box">HTML</div>
+                                    <div class="box">CSS</div>
+                                    <div class="box">JavaScript</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="lampada">
-                    <a href=""><img src="" alt="Lâmpada"></a>
+
+
+
+
+
+                <div class="segundos">
+                    <div class="card">
+                        <a href="projects-add/carros/index.html" target="_blank">
+                            <div class="content">
+                                <img src="assets/images/gifs/carros.gif" alt="Carros">
+                            </div>
+                            <div class="sobreposicao">
+                                <p>Um HTML que permite escolher um carro vermelho ou branco e controlá-lo para frente,
+                                    trás, direita e esquerda via botões ou teclado.</p>
+                                <div class="caixas">
+                                    <div class="box">HTML</div>
+                                    <div class="box">CSS</div>
+                                    <div class="box">JavaScript</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="projects-add/calculadora-completa/atividade 2/index.html" target="_blank">
+                            <div class="content">
+                                <img src="assets/images/gifs/calculadora.gif" alt="Calculadora">
+                            </div>
+                            <div class="sobreposicao">
+                                <p>Um HTML de calculadora que permite inserir números e operações por botões ou teclado,
+                                    exibindo resultados instantâneos.</p>
+                                <div class="caixas">
+                                    <div class="box">HTML</div>
+                                    <div class="box">CSS</div>
+                                    <div class="box">JavaScript</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="carro">
-                    <a href=""><img src="" alt="Carros"></a>
-                </div>
 
-                <div class="calculadora">
-                    <a href=""><img src="" alt="Calculadora"></a>
-                </div>
+
             </div>
         </section>
     </main>
@@ -51,13 +124,20 @@
     <footer>
         <section class="rodape-preto">
             <div class="redes-sociais">
-                <a href="http://instagram.com" target="_blank"><img src="assets/images/instagram.png" alt="Instagram"></a>
+                <a href="https://www.instagram.com/francisco.lvres/?hl=pt-br" target="_blank"><img
+                        src="assets/images/instagram.png" alt="Instagram"></a>
 
-                <a href="http://github.com" target="_blank"><img src="assets/images/github.png" alt="Github"></a>
+                <a href="https://github.com/FranciscoLavres" target="_blank"><img src="assets/images/github.png"
+                        alt="Github"></a>
 
-                <a href="http://linkedin.com" target="_blank"><img src="assets/images/linkedin.png" alt="Linkedin"></a>
+                <a href="https://www.linkedin.com/in/francisco-lavres-820115399/" target="_blank"><img
+                        src="assets/images/linkedin.png" alt="Linkedin"></a>
 
-                <a href="http://x.com" target="_blank"><img src="assets/images/twitter.png" alt="Twitter/X"></a>
+                <a href="https://x.com/franciscolvres" target="_blank"><img src="assets/images/twitter.png"
+                        alt="Twitter/X"></a>
+
+                <a href="https://discord.com/users/fava45" target="_blank"><img src="assets/images/discord.png"
+                        alt="Discord"></a>
             </div>
 
             <div class="copy">
@@ -65,8 +145,9 @@
                 <!--Centralizar e jogar para baixo-->
             </div>
 
-            <div class="modo-escuro"><img src="assets/images/escuro.png" alt="Modo Escuro"></div>
+            <div class="modo-escuro" id="escuro"><img src="assets/images/escuro.png" alt="Modo Escuro"></div>
         </section>
     </footer>
 </body>
+
 </html>

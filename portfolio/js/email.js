@@ -1,32 +1,28 @@
-//Selecionando elementos
-const emailInput = document.querySelector("#emailInput")
-const resultMessage = document.querySelector("#resultMessage")
-const emailForm = document.querySelector("#emailForm")
+const emailInput = document.getElementById("emailInput");
+const enviarBtn = document.getElementById("enviarBtn");
+const resultMessage = document.getElementById("resultMessage");
 
-//  Um evento que controla/ativa dps da submissao do form
+// Função mínima de validação de email
+function validateEmail(email) {
+    return /^[^\s]+@[^\s]+\.[^\s]+$/.test(email);
+}
 
-emailForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+// Evento de clique
+enviarBtn.addEventListener("click", () => {
 
+    console.log("Botão clicado!");
+    
+    const email = emailInput.value.trim();
 
-    const email = emailInput.value;
+    
 
-    //Validar email    
-    const isValid = validateEmail(email);
-
-    if (isValid) {
-        resultMessage.textContent = "OK!"
-        resultMessage.style.color = "green"
+    if (validateEmail(email)) {
+        resultMessage.textContent = "E-mail válido ✓";
+        resultMessage.style.color = "green";
+        emailInput.style.borderColor = "green"
     } else {
-        resultMessage.textContent = "email invalido"
-        resultMessage.style.color = "red"
+        resultMessage.textContent = "E-mail inválido!";
+        resultMessage.style.color = "red";
+        emailInput.style.borderColor = "red"
     }
 });
-
-// Função validar emauils
-
-const validateEmail = (email) => {
-    //Padrão do email: TEXTO@TEXTO.TEXTO
-    const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
-    return regex.test(email);
-};
