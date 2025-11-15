@@ -1,56 +1,53 @@
-main{
-   /* background-color: white;*/
+main {
+    /* background-color: white;*/
     display: flex;
     flex-direction: column;
 }
 
-.espaco{
-   /*  background-color: aqua;*/
+.espaco {
     display: flex;
 }
 
-.sobre-mim{
-   /*  background-color: lightblue;*/
+.sobre-mim {
+    /*  background-color: lightblue;*/
     width: 50%;
     height: auto;
     font-size: 30px;
     padding: 70px;
 }
 
-.skills{
-   /*  background-color: beige;*/
+.skills {
+    /*  background-color: beige;*/
     width: 50%;
     height: auto;
     display: flex;
     flex-direction: column;
-
-
 }
 
-.skills-nome{
+.skills-nome {
     font-size: 60px;
     justify-content: center;
     display: flex;
-    
+
 }
 
-.linguagens{
+.linguagens {
     flex-direction: column;
     display: flex;
 }
 
-.linguagens ul{
+.linguagens ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 30px;
     padding: 0;
-    margin: 0; 
+    margin: 0;
     font-size: 25px;
 }
 
 
-.linguagens button{
+.linguagens button {
     font-size: 25px;
     width: auto;
     background-color: lightgray;
@@ -60,19 +57,19 @@ main{
     transition: 500ms;
 }
 
-.linguagens button:hover{
+.linguagens button:hover {
     transform: scale(1.3);
     transition: 500ms;
 }
 
-.linguagens button:active{
+.linguagens button:active {
     background-color: rgb(129, 129, 129);
-    border: 3px solid rgb(0,0,0);
+    border: 3px solid rgb(0, 0, 0);
     color: lightgray;
     transition: 200ms;
 }
 
-.center{
+.center {
     justify-content: center;
     display: flex;
 }
@@ -106,3 +103,70 @@ button {
         transform: translateY(0);
     }
 }
+
+
+/*
+RESPONSIVIDADE
+*/
+@media (max-width: 800px) {
+  
+    main{
+        justify-content: center;
+        display: flex;
+    }
+
+    .titulo {
+        font-size: 50px;
+    }
+
+    .conteudo {
+       
+        display: flex;
+        margin-bottom: 150px;
+        flex-direction: column;
+    }
+
+    
+    .espaco{
+        flex-direction: column;
+        display: flex; 
+
+    }
+
+    .sobre-mim{
+        display: flex;
+        text-align: initial;
+        align-items: center;
+        font-size: 17px;
+        padding: 0px;
+        justify-content: center;
+        width: 96%;
+        padding: 9px;
+    }
+
+    .skills{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .skills-nome p{
+        font-size: 40px;
+    }
+
+    .linguagens ul{
+        gap: 10px;
+    }
+
+    .linguagens li{
+        font-size: 20px;
+    }
+
+    .linguagens button:hover {
+    transform: scale(1.15);
+}
+
+
+}
+
+

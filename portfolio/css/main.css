@@ -9,6 +9,7 @@
     font-family: "corpo";
     src: url(../assets/fonts/Instrument_Sans/InstrumentSans-VariableFont_wdth\,wght.ttf);
 }
+
 /*
 GLOBAL
 */
@@ -27,26 +28,30 @@ body {
     margin: 0;
 }
 
-span{
+span {
     font-family: "titulos";
 }
 
-.titulo{
+.titulo {
     display: flex;
-    justify-content: center; /* centraliza horizontal */
-    align-items: center;     /* centraliza vertical */
-    width: 100%;        /* garante que ocupe a linha inteira */
-    font-size: 70px;  
+    justify-content: center;
+    /* centraliza horizontal */
+    align-items: center;
+    /* centraliza vertical */
+    width: 100%;
+    /* garante que ocupe a linha inteira */
+    font-size: 70px;
 }
 
-.titulo p{
-    
+.titulo p {
+
     position: relative;
     display: inline-block;
-    font-size: inherit; /* mantém o tamanho do pai */
+    font-size: inherit;
+    /* mantém o tamanho do pai */
 }
 
-.titulo p::after{
+.titulo p::after {
     content: "";
     position: absolute;
     left: 0;
@@ -61,9 +66,15 @@ span{
 }
 
 @keyframes linha {
-    from { transform: scaleX(0); }
-    to   { transform: scaleX(1); }
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
 }
+
 /*
 HEADER, LOGO E NAV
 */
@@ -79,13 +90,13 @@ header {
     justify-content: center;
 }
 
-.logotipo img{
+.logotipo img {
     width: 80px;
     height: auto;
     transition: 1.2s;
 }
 
-.logotipo img:hover{
+.logotipo img:hover {
     transform: scale(1.1);
     transform: rotate(360deg);
     transition: 1.2s;
@@ -94,22 +105,22 @@ header {
 nav {
     display: flex;
     gap: 50px;
-    margin-left: auto; 
+    margin-left: auto;
     position: fixed;
     right: 80px;
     top: 20px;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 50px;
     padding: 0;
-    margin: 0; 
+    margin: 0;
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: var(--black);
     font-size: 28px;
@@ -117,7 +128,7 @@ nav a{
     transition: transform 500ms ease-in-out;
 }
 
-nav a::after{
+nav a::after {
     content: " ";
     width: 100%;
     height: 2px;
@@ -130,129 +141,14 @@ nav a::after{
     transition: transform 500ms ease-in-out;
 }
 
-nav a:hover::after{
+nav a:hover::after {
     transform: translateX(-50%) scaleX(1);
 }
 
-nav a:hover{
+nav a:hover {
     transform: scale(1.1);
     transition: 500ms;
 }
-
-/*
-FOOTER, REDES SOCIAIS, DIREITOS RESERVADOS E MODO ESCURO
-*/
-
-.rodape-preto{
-    background-color: var(--black);
-    width: 100%;
-    height: 7%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.redes-sociais{
-    filter: invert(0.8);
-    position: absolute;
-    left: 10px;
-    top: 13px;
-}
-
-.redes-sociais img{
-    transition: 400ms;
-}
-
-.redes-sociais img:hover{
-    transform: scale(1.1);
-    transition: 400ms;
-}
-
-.copy{
-    filter: invert(0.8);
-    bottom: 2px;
-    position: absolute;
-    font-size: 12px;
-}
-
-.modo-escuro img{
-    filter: invert(0.8);
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    transition: 400ms;
-    cursor: pointer;
-}
-
-.modo-escuro img:hover{
-    transform: scale(1.1);
-    transition: 400ms;
-}
-
-/*
-MODO ESCURO
-*/
-
-
-body.escuro {
-    background: linear-gradient(to left, var(--greydark), var(--greystrong));
-    color: var(--greysoft);
-}
-
-.escuro .logotipo img{
-    filter: invert(1);
-}
-
-.escuro .redes-sociais img {
-    filter: invert(1);
-}
-
-.escuro .modo-escuro img{
-    filter: invert(0);
-}
-
-body.escuro a{
-    color: var(--greysoft);
-}
-
-.escuro .rodape-preto{
-    background-color: var(--greysoft);
-
-}
-
-.escuro .titulo p::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-    width: 100%;
-    height: 3px;
-    background: var(--greysoft);
-
-    transform: scaleX(0);
-    transform-origin: center;
-    animation: linha 0.8s ease forwards;
-}
-
-.escuro nav a::after{
-    content: " ";
-    width: 100%;
-    height: 2px;
-    background-color: var(--greysoft);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    transform-origin: center;
-}
-
-nav a:hover::after{
-    transform: translateX(-50%) scaleX(1);
-}
-
 
 #menu-toggle {
     display: none;
@@ -269,10 +165,133 @@ nav a:hover::after{
     z-index: 2000;
 }
 
-/* 
-RESPONSIVO
+
+/*
+FOOTER, REDES SOCIAIS, DIREITOS RESERVADOS E MODO ESCURO
 */
+
+.rodape-preto {
+    background-color: var(--black);
+    width: 100%;
+    height: 7%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.redes-sociais {
+    filter: invert(0.8);
+    position: absolute;
+    left: 10px;
+    top: 13px;
+}
+
+.redes-sociais img {
+    transition: 400ms;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.1);
+    transition: 400ms;
+}
+
+.copy {
+    filter: invert(0.8);
+    bottom: 2px;
+    position: absolute;
+    font-size: 12px;
+}
+
+.modo-escuro img {
+    filter: invert(0.8);
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.modo-escuro img:hover {
+    transform: scale(1.1);
+    transition: 400ms;
+}
+
+/*
+MODO ESCURO
+*/
+
+
+body.escuro {
+    background: linear-gradient(to left, var(--greydark), var(--greystrong));
+    color: var(--greysoft);
+}
+
+.escuro .logotipo img {
+    filter: invert(1);
+}
+
+.escuro .redes-sociais img {
+    filter: invert(1);
+}
+
+.escuro .modo-escuro img {
+    filter: invert(0);
+}
+
+body.escuro a {
+    color: var(--greysoft);
+}
+
+.escuro .rodape-preto {
+    background-color: var(--greysoft);
+
+}
+
+.escuro .titulo p::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background: var(--greysoft);
+
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: linha 0.8s ease forwards;
+}
+
+.escuro nav a::after {
+    content: " ";
+    width: 100%;
+    height: 2px;
+    background-color: var(--greysoft);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+}
+
+nav a:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+
+
+/* 
+RESPONSIViDADE
+*/
+
+
 @media (max-width: 800px) {
+    /*
+   NAV APENAS
+   */
+
     .hamburger {
         display: block;
     }
@@ -283,11 +302,19 @@ RESPONSIVO
         position: fixed;
         top: 0;
         right: 0;
-        background: var(--black);
+        background: var(--greysoft);
         width: 200px;
         height: 100vh;
         padding-top: 80px;
         z-index: 1500;
+    }
+
+    .escuro nav {
+        background: var(--black);
+    }
+
+    .escuro nav ul a {
+        color: var(--greysoft);
     }
 
     nav ul {
@@ -300,7 +327,31 @@ RESPONSIVO
         font-size: 24px;
     }
 
-    #menu-toggle:checked ~ nav {
+    #menu-toggle:checked~nav {
         display: flex;
     }
+
+    .escuro #menu-toggle:checked {
+        color: #000;
+    }
+
+    /*
+    FOOTER
+    */
+    .rodape-preto {
+        background-color: var(--black);
+        width: 100%;
+        height: 11%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .copy{
+        font-size: 9px;
+    }
+
 }

@@ -1,4 +1,4 @@
-.geral{
+.geral {
     /*background-color: aqua;*/
     width: 100%;
     display: inline-block;
@@ -6,7 +6,7 @@
     margin-top: 1px;
 }
 
-input{
+input {
     border-radius: 13px;
     background-color: lightgray;
     border-color: rgb(163, 163, 163);
@@ -22,7 +22,7 @@ input{
     src: url(../assets/fonts/Instrument_Sans/InstrumentSans-VariableFont_wdth\,wght.ttf);
 }
 
-input::placeholder{
+input::placeholder {
     font-size: 15px;
     font-family: "corpo";
 }
@@ -36,13 +36,13 @@ select:focus {
     border: 2px solid rgb(105, 105, 105);
 }
 
-select option{
+select option {
     font-family: "corpo";
     color: rgb(0, 0, 0);
     outline: none;
 }
 
-.conteudo{
+.conteudo {
     /*background-color: aqua;*/
     width: 100%;
     display: flex;
@@ -50,21 +50,21 @@ select option{
     margin-top: 10px;
 }
 
-.map{
+.map {
     width: 40%;
-   /* background-color: blue;*/
+    /* background-color: blue;*/
     margin-left: 50px;
     border: 100px rgb(163, 163, 163);
 }
 
-.map iframe{
+.map iframe {
     width: 100%;
     height: 400px;
     border-radius: 13px;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.324);
 }
 
-.contato{
+.contato {
     /*background-color: azure;*/
     width: 60%;
     display: flex;
@@ -73,7 +73,7 @@ select option{
     position: relative;
 }
 
-.nome-email{
+.nome-email {
     /*background-color: blue;*/
     display: flex;
     gap: 20px;
@@ -81,31 +81,31 @@ select option{
     justify-content: center;
 }
 
-.individual{
-   /* background-color: brown;*/
+.individual {
+    /* background-color: brown;*/
     width: 45%;
 }
 
-.individual input{
+.individual input {
     flex: 1;
     width: 100%;
     height: 40px;
     margin-right: 10px;
 }
 
-.interesse{
-   /* background-color: cadetblue;*/
+.interesse {
+    /* background-color: cadetblue;*/
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
 }
 
-.interesse-centro{
+.interesse-centro {
     width: 70%;
 }
 
-.interesse-centro select{
+.interesse-centro select {
     width: 100%;
     height: 40px;
     border-radius: 13px;
@@ -116,14 +116,14 @@ select option{
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.178);
 }
 
-.descript{
-   /* background-color: yellowgreen;*/
+.descript {
+    /* background-color: yellowgreen;*/
     display: flex;
     justify-content: center;
     height: 60%;
     max-width: 1143px;
     display: flex;
-    align-items: center ;
+    align-items: center;
     justify-content: center;
     width: 100%;
     left: 0;
@@ -133,9 +133,9 @@ select option{
     position: relative;
 }
 
-.desc{
+.desc {
     display: flex;
-    align-items: center ;
+    align-items: center;
     justify-content: center;
     width: 100%;
     left: 0;
@@ -145,7 +145,7 @@ select option{
     position: relative;
 }
 
-.descript textarea{
+.descript textarea {
     position: absolute;
     width: 76%;
     min-width: 300px;
@@ -173,7 +173,7 @@ textarea:focus {
     justify-content: center;
 }
 
-.btn{
+.btn {
     background-color: lightgray;
     padding: 5px;
     border-color: 2px rgb(102, 102, 102);
@@ -188,20 +188,100 @@ textarea:focus {
     bottom: -10px;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.1);
     transition: 350ms;
 }
 
-.btn:active{
+.btn:active {
     background-color: rgb(129, 129, 129);
     border: 3px solid rgb(71, 71, 71);
     color: lightgray;
     transition: 100ms;
 }
 
-.confirma{
+.confirma {
     justify-content: end;
     display: flex;
     margin-right: 20px;
+}
+
+
+/*
+RESPONSIVIDADE
+*/
+
+@media (max-width: 800px) {
+    .titulo {
+        font-size: 50px;
+    }
+
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .map {
+        width: 80%;
+        margin-left: 0;
+        max-height: 5;
+        margin-bottom: 20px;
+    }
+
+    .map iframe {
+        height: 200px;
+    }
+
+    .contato{
+        width: 100%;
+        margin-bottom: 150px;
+    }
+
+    .nome-email {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .individual input {
+        flex: 1;
+        width: 100%;
+        height: 40px;
+        margin-right: 10px;
+        
+    }
+
+
+    .interesse-centro {
+        width: 60%;
+    }
+
+    .descript {
+        width: 100%;
+        position: relative;
+    }
+
+    .desc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        position: relative;
+    }
+
+    .descript textarea {
+        position: relative;
+        width: 100%;
+    }
+
+    .confirma {
+    justify-content: initial;
+    display: flex;
+    margin-left: 20px;
+
+    }
+
+
 }
